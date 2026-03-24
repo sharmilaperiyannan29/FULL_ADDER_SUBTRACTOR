@@ -40,16 +40,50 @@ Borrow out = A'Bin + A'B + BBin
 
 **Procedure**
 
-Write the detailed procedure here
-
+Developed by:sharmila Register number:212225230261
 **Program:**
+FULL ADDER:
+```
+module fulladder(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+```
+FULL SUBRACTOR:
+```
+module sub(a,b,c,x,y,z,sum,dif,car,bor);
+input a,b,c,x,y,z;
+output sum,dif,car,bor;
+assign sum = a^b^c;
+assign car = a&b | a&c | b&c;
+assign dif = x^y^z;
+assign bor = ~x&z | ~x&y | y&z;
+endmodule
+```
 
 **RTL Schematic**
+FULL ADDER
+<img width="1307" height="737" alt="image" src="https://github.com/user-attachments/assets/546dd762-8e81-4ce8-a7f4-354390cfb8f1" />
+FULL SUBRACTOR
+<img width="1306" height="682" alt="image" src="https://github.com/user-attachments/assets/102a8d68-c18c-4349-9e53-b3b71a5c2385" />
 
 **Output Timing Waveform**
+FULL ADDER
+<img width="1168" height="580" alt="image" src="https://github.com/user-attachments/assets/6f61e6c4-cd8a-43f5-b463-f5bb1ee30ce6" />
+FULL SUBRACTOR
+<img width="1167" height="595" alt="image" src="https://github.com/user-attachments/assets/ad0e0d63-2e95-4a33-8750-15200546b8ac" />
+
+
 
 **Result:**
 

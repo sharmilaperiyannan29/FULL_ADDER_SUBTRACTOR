@@ -38,10 +38,11 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
-**Procedure**
+
 
 Developed by:sharmila Register number:212225230261
-**Program:**
+
+Program
 FULL ADDER:
 ```
 module fulladder(sum, cout, a, b, cin);
